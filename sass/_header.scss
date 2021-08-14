@@ -1,0 +1,144 @@
+header {
+  width: 100%;
+  height: 100px;
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  background-color: white;
+  .container__header {
+    max-width: 1310px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0px 20px;
+    flex-wrap: wrap;
+  }
+  .container__header_2 {
+    width: 100%;
+    max-width: 1150px;
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: 1300px) {
+      max-width: 900px;
+    }
+  }
+  .logo {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100px;
+    }
+  }
+  .items {
+    position: relative;
+    height: 100%;
+    max-width: 900px;
+    width: 100%;
+    @media (max-width: 1300px) {
+      max-width: 500px;
+    }
+  }
+  nav,
+  .login {
+    height: 100%;
+    ul {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      li {
+        margin: 0px 20px;
+        list-style: none;
+        a {
+          color: hsl(257, 7%, 63%);
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .hamburguesa {
+    display: none;
+  }
+  .items {
+    position: relative;
+    height: 100%;
+    ul {
+      justify-content: left;
+      li a:hover {
+        font-weight: bold;
+        color: black;
+      }
+    }
+  }
+}
+
+@media (max-width: 1060px) {
+  header {
+    flex-direction: column;
+    padding-top: 30px;
+    justify-content: left;
+    height: auto;
+
+    align-items: start;
+    .items {
+      margin: 30px auto 0;
+      ul {
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+    nav ul,
+    .login ul {
+      flex-direction: column;
+      justify-content: center;
+      li {
+        margin: 0px 20px 20px;
+      }
+    }
+    .login {
+      width: 100%;
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid gray;
+      li:last-child {
+        width: 100%;
+        a {
+          width: 90%;
+          display: block;
+          margin: 0 auto 20px;
+          text-align: center;
+        }
+      }
+    }
+    .container__header_2 {
+      background: hsl(257, 27%, 26%);
+      border-radius: 10px;
+      margin-top: 20px;
+      width: 100%;
+      height: auto;
+      max-width: none;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      display: none;
+      &.active {
+        display: flex;
+      }
+    }
+    .hamburguesa {
+      display: block;
+      width: 20px;
+      height: 20px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
